@@ -36,7 +36,7 @@ const App = () => {
     useEffect(() => {
         if(currentQRCode && currentQRCode !== ''){
             console.log(currentQRCode);
-            fetch(`/code?${encodeURIComponent(currentQRCode)}`);
+            fetch(`/?code=${encodeURIComponent(currentQRCode)}`);
         }
         }, [currentQRCode]);
     return (
